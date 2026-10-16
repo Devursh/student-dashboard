@@ -5,7 +5,7 @@ FONT SIZES
 10.67px / 12px / 13.5px / 15.2px / 17.1px / 19.2px / 21.6px / 24.3px
 
 FONT WEIGHTS
-300 / 400 / 600
+300 / 400 / 500 / 600
 
 FONT FAMILY
 Poppins
@@ -38,8 +38,8 @@ Shade: #F1F1F1
     --text-h1: 2.43rem;
 
     /* FONT WEIGHT */
-    --font-weight-thin: 300;
     --font-weight-normal: 400;
+    --font-weight-semi-bold: 500;
     --font-weight-bold: 600;
 
     /* FONT FAMILY */
@@ -68,6 +68,7 @@ body{
     font-family: var(--font-family);
     color: var(--text-base);
     display: flex;
+    font-weight: var(--font-weight-normal);
 }
 
 p{
@@ -78,6 +79,10 @@ a{
     font-size: var(--text-anchor);
     text-decoration: none;
     color: var(--text-base)
+}
+
+span{
+    font-size: var(--text-paragraph);
 }
 
 h5{
@@ -182,6 +187,8 @@ ul{
     padding: 5rem 4rem;
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 #heading-paragraph{
@@ -193,6 +200,7 @@ ul{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 1rem;
+    margin-bottom: 2rem;
 }
 
 .stat-card{
@@ -240,4 +248,87 @@ ul{
     display: flex;
     flex-direction: column;
     gap: 0.7rem;
+}
+
+.assignments{
+    width: 60%;
+    border: 1px solid var(--primary-tint);
+    border-radius: 20px;
+    padding: 1.5rem;
+}
+
+.assignments-header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.assignments-header a{
+    color: var(--primary-base);
+}
+
+.assignment-row{
+    display: grid;
+    grid-template-columns: 2fr 1.2fr 1fr 1fr;
+    margin-bottom: 1.5rem;
+    justify-items: start;
+}
+
+.assignment-column{
+    font-size: 1.3rem;
+    color: var(--text-tint);
+    font-weight: var(--font-weight-semi-bold);
+}
+
+.task-name{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.subject{
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: var(--font-weight-semi-bold);
+}
+
+.math{
+    background-color: #DCEBFF;
+    color: #2563EB;
+}
+
+.english{
+    background-color: #F0E5FF;
+    color: #7906C5;
+}
+
+.science{
+    background-color: #DDF5E5;
+    color: #16834A;
+}
+
+.computer-studies{
+    background-color: #FFF0D6;
+    color: #B96A08;
+}
+
+.french{
+    background-color: #FFE4EC;
+    color: #D6336C;
+}
+
+.status{
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: var(--font-weight-bold);
+}
+
+.not-started{
+    background-color: var(--background-shade);
+    color: var(--text-tint);
+}
+
+.in-progress{
+    background-color: #FFF0D6;
+    color: #B96A08;
 }
