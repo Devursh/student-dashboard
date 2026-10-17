@@ -28,14 +28,14 @@ Shade: #F1F1F1
 
 :root{
     /* FONT SIZE */
-    --text-small: 1rem;
-    --text-paragraph: 1.2rem;
-    --text-anchor: 1.35rem;
-    --text-h5: 1.52rem;
-    --text-h4: 1.71rem;
-    --text-h3: 1.92rem;
-    --text-h2: 2.16rem;
-    --text-h1: 2.43rem;
+    --text-small: 1.2rem;
+    --text-paragraph: 1.35rem;
+    --text-anchor: 1.52rem;
+    --text-h5: 1.71rem;
+    --text-h4: 1.92rem;
+    --text-h3: 2.16rem;
+    --text-h2: 2.43rem;
+    --text-h1: 2.71rem;
 
     /* FONT WEIGHT */
     --font-weight-normal: 400;
@@ -186,7 +186,7 @@ ul{
 .main-container{
     padding: 5rem 4rem;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
 }
@@ -251,7 +251,10 @@ ul{
 }
 
 .assignments{
-    width: 60%;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
     border: 1px solid var(--primary-tint);
     border-radius: 20px;
     padding: 1.5rem;
@@ -269,9 +272,13 @@ ul{
 
 .assignment-row{
     display: grid;
-    grid-template-columns: 2fr 1.2fr 1fr 1fr;
-    margin-bottom: 1.5rem;
+    grid-template-columns: 1.8fr 1.2fr 1fr 1fr;
+    margin-bottom: 1rem;
     justify-items: start;
+}
+
+.last-assignment-row{
+    margin-bottom: 0;
 }
 
 .assignment-column{
@@ -290,6 +297,11 @@ ul{
     padding: 0.5rem 1rem;
     border-radius: 5px;
     font-weight: var(--font-weight-semi-bold);
+}
+
+.due-date{
+    display: flex;
+    align-items: center;
 }
 
 .math{
@@ -331,4 +343,22 @@ ul{
 .in-progress{
     background-color: #FFF0D6;
     color: #B96A08;
+}
+@media (max-width: 83.4rem){
+    html{
+        font-size: 50%;
+    }
+
+    .nav-buttons ul{
+        gap: 2rem;
+    }
+
+    .assignment-row{
+        grid-template-columns: 1.8fr 1.4fr 1.2fr 1fr;
+        margin-bottom: 2rem;
+    }
+
+    .last-assignment-row{
+        margin-bottom: 0;
+    }
 }
