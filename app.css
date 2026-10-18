@@ -144,7 +144,7 @@ ul{
 }
 
 .nav-buttons ul{
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .nav-buttons div{
@@ -311,6 +311,11 @@ ul{
     gap: 0.7rem;
 }
 
+.horizontal-display{
+    display: flex;
+    gap: 2rem;
+}
+
 .assignments{
     width: 65%;
     display: flex;
@@ -328,6 +333,9 @@ ul{
 
 .assignments-header a{
     color: var(--primary-base);
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
 }
 
 .assignment-row:not(.assignment-column){
@@ -415,15 +423,53 @@ ul{
     background-color: #FFF0D6;
     color: #B96A08;
 }
+
+.add-assignments{
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: stretch;
+    flex-grow: 1;
+    border: 1px solid var(--primary-tint);
+    border-radius: 20px;
+    height: 25rem;
+}
+
+.add-assignments .heading{
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.add-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    background-color: var(--primary-tint);
+    border-radius: 50%;
+}
+
+.add{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    color: var(--text-tint);
+    padding: 0.75rem 0.5rem;
+    border: 1px solid var(--primary-tint);
+    border-radius: 15px;
+}
+
+.heading-text p{
+    color: var(--text-tint);
+}
+
+
 @media (max-width: 87.5rem){
-    html{
+    /* html{
         font-size: 56.25%;
-    }
-
-    .nav-buttons ul{
-        gap: 2rem;
-    }
-
+    } */
     .assignment-column{
         margin-bottom: 0;
     }
@@ -433,7 +479,7 @@ ul{
     }
 }
 
-@media (max-width: 75.25rem){
+@media (max-width: 83.5rem){
     .nav-bar{
         width: 20rem;
     }
@@ -475,7 +521,7 @@ ul{
     }
 }
 
-@media (max-width: 58rem){
+@media (max-width: 67rem){
     .assignment-column{
         display: none;
     }
@@ -516,7 +562,7 @@ ul{
     }
 }
 
-@media (max-width: 50.5rem){
+@media (max-width: 57rem){
     .nav-bar{
         position: absolute;
         width: 100vw;
@@ -528,6 +574,14 @@ ul{
 
     .nav-bar .small-profile-card{
         display: none;
+    }
+
+    .nav-buttons{
+        display: none;
+    }
+
+    .menu-icon{
+        display: flex;
     }
 
     .nav-bar .logo{
@@ -545,32 +599,13 @@ ul{
     }
 
     .main-container{
-        padding-top: 10rem;
+        padding-top: 8rem;
         width: 100%;
+        height: 100%;
     }
 
-    /* .profile-card{
-        display: flex;
-        gap: 2rem;
-    } */
-
-    .stats{
-        grid-template-columns: repeat(2, 1fr);
-        row-gap: 2rem;
-    }
-
-    .assignments{
-        width: 100%;
-    }
-}
-
-@media (max-width: 47.5rem){
-    .menu-icon{
-        display: flex;
-    }
-
-    .nav-buttons{
-        display: none;
+    .horizontal-display{
+        flex-direction: column;
     }
 
     .assignment-row:not(.assignment-column){
@@ -584,5 +619,105 @@ ul{
         grid-template-columns: 1.2fr 1fr 1fr;
         width: 100%;
         justify-items: start;
+    }
+
+    .subject{
+        padding: 0.5rem 1rem;
+    }
+
+    .math{
+        background-color: #DCEBFF;
+        color: #2563EB;
+    }
+
+    .english{
+        background-color: #F0E5FF;
+        color: #7906C5;
+    }
+
+    .science{
+        background-color: #DDF5E5;
+        color: #16834A;
+    }
+
+    .computer-studies{
+        background-color: #FFF0D6;
+        color: #B96A08;
+        width: 9rem;
+    }
+
+    .french{
+        background-color: #FFE4EC;
+        color: #D6336C;
+    }
+
+    .stats{
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 2rem;
+    }
+
+    .assignments{
+        width: 100%;
+    }
+}
+
+@media (max-width: 35.65rem){
+    .assignment-row:not(.assignment-column){
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .assignment-details {
+        grid-column: 1;
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    .subject,
+    .due-date{
+        color: var(--text-tint)
+    }
+
+    .due-date{
+        margin-left: 1rem;
+    }
+
+    .status{
+        margin-left: auto;
+    }
+
+    .subject{
+        width: auto;
+        background-color: transparent;
+        padding: 0;
+    }
+}
+
+@media (max-width: 26rem){
+    html{
+        font-size: 57.5%;
+    }
+
+    .assignment-details{
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    }
+
+    .subject{
+        grid-column: 1;
+    }
+
+    .due-date{
+        grid-column: 1;
+        margin-left: 0;
+    }
+
+    .status{
+        grid-row: 1 / span 2;
+        grid-column: 2/3;
+    }
+    .assignments-header a{
+        width: 40%;
+        justify-content: flex-end;
     }
 }
