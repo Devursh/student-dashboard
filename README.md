@@ -35,20 +35,13 @@ While working on this project, I improved my understanding of:
 # **Future Improvements**
 
 This project is still a work in progress, and I plan to keep improving it as I learn more about web development.
+Things I plan to change include:
 
-Learn JavaScript: Add functionality to make the dashboard more interactive.
-
-Manage assignments: Allow users to add, edit, and delete assignments.
-
-Track progress: Add ways to mark tasks as completed and track progress.
-
-Save data: Use local storage so assignments and progress remain available after refreshing the page.
-
-Improve responsiveness: Continue refining the layout across different screen sizes.
-
-Refine the design: Make adjustments to the interface as I learn new CSS techniques and improve my design skills.
-
-I plan to update this project as I learn new skills and find better ways to implement its features.
+- Learn JavaScript: Add functionality to make the dashboard more interactive and actually allow users to put their assignments.
+- Manage assignments: Allow users to add, edit, and delete assignments.
+- Track progress: Add ways to mark tasks as completed and track progress.
+- Save data: Use local storage so assignments and progress remain available after refreshing the page.
+- Improve responsiveness: Continue refining the layout across different screen sizes.
 
 ## **Running the Project**
 
@@ -57,5 +50,5 @@ REMINDER: This is not the final version and will still undergo changes. The butt
 
 ## **Why I Built This**
 
-I wanted to build something practical while improving my frontend development skills. Instead of just following tutorials, I used this project to practise what I was learning and give myself a foundation to build on as I learn JavaScript and more advanced web development.
+I wanted to build something practical while improving my frontend development skills. Instead of just following tutorials, I used this project to practise what I was learning and give myself something to build on as I learn JavaScript and more advanced web development.
 
