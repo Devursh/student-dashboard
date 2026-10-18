@@ -10,7 +10,7 @@ This project has also helped me improve my CSS skills as I worked with layouts a
 
 ## **How it Looks**
 
-(images/student-dashboard.png)
+[Screenshot of Student Dashboard](images/student-dashboard-image.png)
 
 ## **Technologies Used**
 
