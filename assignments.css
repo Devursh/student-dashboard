@@ -1,0 +1,63 @@
+:root{
+    /* FONT SIZE */
+    --text-small: 1.2rem;
+    --text-paragraph: 1.35rem;
+    --text-anchor: 1.52rem;
+    --text-h5: 1.71rem;
+    --text-h4: 1.92rem;
+    --text-h3: 2.16rem;
+    --text-h2: 2.43rem;
+    --text-h1: 2.71rem;
+
+    /* FONT WEIGHT */
+    --font-weight-normal: 400;
+    --font-weight-semi-bold: 500;
+    --font-weight-bold: 600;
+
+    /* FONT FAMILY */
+    --font-family: 'Poppins', sans-serif;
+
+    /* COLORS */
+    --primary-base: #7906C5;
+    --primary-tint: #EDE0FA;
+    --text-base: #000000;
+    --text-tint: #6B7280;
+    --background-base: #FFFFFF;
+    --background-shade: #f1f1f1;
+}
+
+.assignments{
+    width: 100%;
+}
+
+.assignments-page-container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.assignment-visibilities{
+    display: flex;
+    gap: 1.5rem;
+}
+
+.assignment-visibility{
+    padding: 0.75rem 2rem;
+    border-radius: 20px;
+    background-color: var(--background-shade);
+}
+
+.currently-selected{
+    background-color: var(--primary-base);
+    color: var(--background-base)
+}
+
+@media (max-width: 35.65rem){
+    .assignment-visibility{
+        font-size: var(--text-small);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+}
