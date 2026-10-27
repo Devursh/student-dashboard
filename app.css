@@ -204,7 +204,6 @@ ul{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--primary-shade);
     padding: 2rem 0;
 }
 
