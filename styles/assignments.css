@@ -19,8 +19,9 @@
 
     /* COLORS */
     --primary-base: #7906C5;
-    --primary-shade: #32166F;
     --primary-tint: #EDE0FA;
+    --gray-base: #32166F;
+    --gray-tint: #433879;
     --text-base: #000000;
     --text-tint: #6B7280;
     --background-base: #FFFFFF;
@@ -52,11 +53,8 @@ button{
     flex-direction: column;
 }
 
-.add-assignments-btn{
+.btn{
     padding: 1rem 2rem;
-    border: 0;
-    background-color: var(--primary-base);
-    color: var(--background-base);
     border-radius: 5px;
     display: flex;
     gap: 1rem;
@@ -64,8 +62,21 @@ button{
     cursor: pointer;
 }
 
+.primary-btn{
+    background-color: var(--primary-base);
+    color: var(--background-base);
+    border: 1px solid var(--primary-base)
+}
+
+.secondary-btn{
+    background-color: var(--background-base);
+    color: var(--primary-base);
+    border: 1px solid var(--text-tint)
+}
+
+
 .add-assignment-menu{
-    display: flex;
+    display: none;
     flex-direction: column;
     position: absolute;
     left: 50%;
@@ -76,20 +87,55 @@ button{
     gap: 1rem;
     background-color: var(--background-shade);
     padding: 1.5rem 2rem;
+    padding-bottom: 4rem;
     border-radius: 10px;
+}
+
+.visible{
+    display: flex;
 }
 
 .add-assignment-menu-heading{
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
-    color: var(--primary-shade);
+    color: var(--gray-base);
+}
+
+.add-assignment-menu-close-btn{
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    cursor: pointer;
+    font-size: var(--text-h5);
+    background-color: none;
+    border: none;
+}
+
+.assignment-detail > :first-child{
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.assignment-detail label{
+    color: var(--gray-tint);
+    font-size: var(--text-paragraph);
+}
+
+.assignment-detail select{
+    border: none;
+    width: 100%;
+    color: var(--text-tint);
+}
+
+.assignment-detail select:focus{
+    outline: none;
 }
 
 .add-assignment-details{
     display: flex;
     flex-direction: column;
-    gap: 0.2rem;
+    gap: 1.5rem;
 }
 
 .add-assignment-input-box{
@@ -115,6 +161,15 @@ button{
 
 .add-assignment-input-box input:focus{
     outline: none;
+}
+
+.add-assignment-buttons{
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+    width: 100%;
+    flex-grow: 1;
+    align-items: flex-end;
 }
 
 .assignments{
